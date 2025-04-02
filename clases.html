@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases</title>
+</head>
+<body>
+    <header>
+        <h1>Clases</h1>
+    </header>
+     <!--nav-->
+     <nav class="menu-navegacion">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li class="mega-opcion">
+                <a href="clases.html">Clases</a>
+                <div class="mega-menu">
+                    <div class="mega-columna">
+                        <h4>Fuerza</h4>
+                        <a href="#">Musculación</a>
+                        <a href="#">Powerlifting</a>
+                    </div>
+                    <div class="mega-columna">
+                        <h4>Funcional</h4>
+                        <a href="#">CrossFit</a>
+                        <a href="#">Calistenia</a>
+                    </div>
+                    <div class="mega-columna">
+                        <h4>Bienestar</h4>
+                        <a href="#">Yoga</a>
+                        <a href="#">Pilates</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="entrenadores.html">Entrenadores</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="precios.html">Precios</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+    </nav>
+
+    <!--Continuemos con lo que pide de clases en
+    2. Página de Clases (Grid Avanzado + Filtros)
+ Sistema de filtrado por categoría (Musculación, CrossFit, Yoga, Spinning) utilizando solo CSS (:checked y combinadores).
+ Galería tipo "masonry" con CSS Grid, mostrando imágenes de diferentes alturas.
+ UNIVERSIDAD NACIONAL DE JUJUY FACULTAD DE INGENIERÍA APU 2008 01-04-2025
+ Tarjetas con información de las clases, con efectos de zoom y overlay al pasar el
+cursor.
+ Tabla responsiva de horarios semanales, adaptada para vista en dispositivos
+móviles y escritorio.
+    -->
+
+    <section class="clases">
+        <h2>Clases</h2>
+        <div class="contenedor-filtros">
+            <input type="checkbox" id="musculacion" name="categoria" value="musculacion">
+            <label for="musculacion">Musculación</label>
+            <input type="checkbox" id="crossfit" name="categoria" value="crossfit">
+            <label for="crossfit">CrossFit</label>
+            <input type="checkbox" id="yoga" name="categoria" value="yoga">
+            <label for="yoga">Yoga</label>
+            <input type="checkbox" id="spinning" name="categoria" value="spinning">
+            <label for="spinning">Spinning</label>
+        </div>
+    </section>
+    <section class="galeria">
+        <div class="tarjeta">
+            <h3>Musculación</h3>
+            <p>Fuerza y resistencia en cada sesión</p>
+            <img src="/recursos/fotos/index/musculacion 1.jpg" alt=" Musculación">
+            <div class="overlay">
+                <!--DESCRIOCION DE LA CLASE DE MUSCULACION-->
+                <p>Entrenamiento personalizado para aumentar tu fuerza y resistencia muscular.</p>
+            </div>
+        </div>
+        <div class="tarjeta">
+            <h3>CrossFit</h3>
+            <p>Entrenamiento funcional y variado</p>
+            <img src="/recursos/fotos/index/crossfit 3.jpg" alt=" CrossFit">
+            <div class="overlay">
+                <!--DESCRIOCION DE LA CLASE DE CROSSFIT-->
+                <p>Entrenamiento de alta intensidad que combina fuerza y resistencia.</p>
+            </div>
+        </div>
+        <div class="tarjeta">
+            <h3>Yoga</h3>
+            <p>Flexibilidad y equilibrio</p>
+            <img src="/recursos/fotos/index/yoga.jpg" alt=" Yoga">
+            <div class="overlay">
+                <!--DESCRIOCION DE LA CLASE DE YOGA-->
+                <p>Clases de yoga para mejorar tu flexibilidad y bienestar mental.</p>
+        </div>
+    </section>
+    <section class="horarios-semanales">
+        <h2>Horarios Semanales</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Día</th>
+                    <th>Musculación</th>
+                    <th>CrossFit</th>
+                    <th>Yoga</th>
+                    <th>Spinning</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Lunes</td>
+                    <td>10:00 - 11:00</td>
+                    <td>11:30 - 12:30</td>
+                    <td>13:00 - 14:00</td>
+                    <td>18:00 - 19:00</td>
+                </tr>
+                <tr>
+                    <td>Martes</td>
+                    <td>10:00 - 11:00</td>
+                    <td>11:30 - 12:30</td>
+                    <td>13:00 - 14:00</td>
+                    <td>18:00 - 19:00</td>
+                </tr>
+                <tr>
+                    <td>Miércoles</td>
+                    <td>10:00 - 11:00</td>
+                    <td>11:30 - 12:30</td>
+                    <td>13:00 - 14:00</td>
+                    <td>18:00 - 19:00</td>
+                </tr>
+                <tr>
+                    <td>Jueves</td>
+                    <td>10:00 - 11:00</td>
+                    <td>11:30 - 12:30</td>
+                    <td>13:00 - 14:00</td>
+                    <td>18:00 - 19:00</td>
+                </tr>
+                <tr>
+                    <td>Viernes</td>
+                    <td>10:00 - 11:00</td>
+                    <td>11:30 - 12:30</td>
+                    <td>13:00 - 14:00</td>
+                    <td>18:00 - 19:00</td>
+                </tr>
+                <tr>
+                    <td>Sábado</td>
+                    <td>10:00 - 11:00</td>
+                    <td>11:30 - 12:30</td>
+                    <td>13:00 - 14:00</td>
+                    <td>18:00 - 19:00</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section>
+        <h2>Horarios de Atención</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Horario</th>
+                    <th>Clase</th>
+                    <th>Entrenador</th>
+                    <th>Duración</th>
+                </tr>
+            </thead>
+        </table>
+    </section>
+   
+
+
+    
+<!--Footer-->
+<footer>
+    <div class="footer-contenido">
+        <div class="newsletter">
+            <h2>Suscríbete a nuestro boletín</h2>
+            <form action="#">
+                <input type="email" placeholder="Tu correo electrónico" required>
+                <button type="submit">Suscribirse</button>
+            </form>
+        </div>
+        <div class="redes-suscripcion">
+            <h2>Conecta con nosotros</h2>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+        <div class="mapa">
+            <h2>Nuestra ubicación</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2025 Todos los derechos reservados</p>
+    </div>
+</footer>
+</body>
+</html>
