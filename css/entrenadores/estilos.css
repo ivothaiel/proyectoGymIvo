@@ -1,0 +1,302 @@
+/* Importar fuentes de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;500;700&display=swap');
+
+/* Variables CSS para colores y temas */
+:root {
+    --color-primario: #1a1a1a; /* Negro profundo */
+    --color-secundario: #ff4d4d; /* Rojo vibrante */
+    --color-acento: #f5f5f5; /* Gris claro */
+    --color-texto: #ffffff; /* Blanco para texto */
+    --color-texto-secundario: #b0b0b0; /* Gris claro para texto secundario */
+    --color-sombra: rgba(0, 0, 0, 0.3);
+    --color-gradiente: linear-gradient(135deg, #ff4d4d, #ff7b7b);
+}
+
+/* Reset básico y estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-acento);
+    color: var(--color-texto);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    background: var(--color-primario);
+    padding: 1.5rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px var(--color-sombra);
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--color-texto);
+    text-transform: uppercase;
+}
+
+/* Menú de Navegación con Mega-Menú */
+.menu-navegacion {
+    background: var(--color-primario);
+    padding: 1rem;
+    border-bottom: 2px solid var(--color-secundario);
+}
+
+.menu-navegacion ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.menu-navegacion li {
+    position: relative;
+}
+
+.menu-navegacion a {
+    color: var(--color-texto);
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0.7rem 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-navegacion a:hover,
+.menu-navegacion a:focus {
+    color: var(--color-secundario);
+    transform: scale(1.05);
+    outline: none;
+}
+
+/* Mega-Menú */
+.mega-opcion:hover .mega-menu,
+.mega-opcion:focus-within .mega-menu {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mega-menu {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--color-acento);
+    box-shadow: 0 4px 15px var(--color-sombra);
+    padding: 1.5rem;
+    z-index: 1000;
+    flex-direction: row;
+    gap: 2rem;
+    border-radius: 8px;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.mega-columna {
+    display: flex;
+    flex-direction: column;
+}
+
+.mega-columna h4 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-primario);
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+}
+
+.mega-columna a {
+    color: var(--color-primario);
+    padding: 0.5rem 0;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.mega-columna a:hover,
+.mega-columna a:focus {
+    color: var(--color-secundario);
+}
+
+/* Sección Hero */
+.hero {
+    position: relative;
+    height: 70vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.6);
+}
+
+.overlay {
+    text-align: center;
+    color: var(--color-texto);
+    z-index: 1;
+    padding: 2rem;
+}
+
+.overlay h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.overlay p {
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: var(--color-texto-secundario);
+}
+
+/* Sección Entrenadores */
+.seccion-entrenadores {
+    padding: 5rem 2rem;
+    text-align: center;
+    background: var(--color-primario);
+}
+
+.seccion-entrenadores h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--color-texto);
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.contenedor-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tarjeta-entrenador {
+    background: var(--color-acento);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px var(--color-sombra);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.tarjeta-entrenador:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.tarjeta-entrenador img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-entrenador:hover img {
+    transform: scale(1.05);
+}
+
+.tarjeta-entrenador h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--color-primario);
+    margin-bottom: 0.5rem;
+}
+
+.tarjeta-entrenador p {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Barras de Habilidades */
+.barra-habilidades {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.habilidad {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.habilidad span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    color: var(--color-primario);
+    width: 80px;
+    text-align: left;
+}
+
+.habilidad .barra {
+    height: 10px;
+    background: var(--color-gradiente);
+    border-radius: 5px;
+    transition: width 0.5s ease;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .menu-navegacion ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .mega-menu {
+        position: static;
+        flex-direction: column;
+        transform: none;
+    }
+
+    .overlay h2 {
+        font-size: 2rem;
+    }
+
+    .overlay p {
+        font-size: 1rem;
+    }
+
+    .contenedor-tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .seccion-entrenadores h2 {
+        font-size: 2rem;
+    }
+}
